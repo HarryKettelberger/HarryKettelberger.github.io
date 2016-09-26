@@ -1,0 +1,24 @@
+<script src="../lib/tracery.js"></script>
+<script src="../lib/mousetrap.min.js"></script>
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<h1>Text will go here</h1>
+<button onclick="generate()">Generate</button>
+<script>
+var grammarObj = {
+	"sentence" : ["If there's somethin' #adj# in your #place# Who ya gonna #verb#: #noun#"],
+	"adj" : ["dank", "dope", "neat", "racist", "spooky wooky", "fresh", "tight", "jank", "strange"],
+	"verb" : ["screw", "touch", "shoot", "punch", "call", "call", "call", "call", "call", "call","call","call","call","call","call","call", "love", "spank", "eat", "slap", "watch"],
+	"place" : ["elementary school", "funeral home", "dorm party", "chipotle", "city hall", "refrigerator", "underwear drawer", "back pocket", "first world country", "third world country"],
+	"noun" : ["#prefix#busters", "#other#", "#other#"],
+	"other" :["The Democratics", "The Republicans", "Barack Obama", "Todd Anderson", "Joe Biden", "A Man With Tiny Hands", "Hillary Clinton", "Ted Cruz", "Christina Paxton", "Harambe", "Snoop Dogg", "Anthony Weiner", "Vlad Putin", "Kim Jong Un" ],
+	"prefix" : ["Crotch", "Weed", "Meat", "Boob", "Love", "Block", "Door", "Fun", "Ball"]
+	
+	
+
+}
+var grammar = tracery.createGrammar(grammarObj)
+function generate(){
+	var t = grammar.flatten("#sentence#");
+	$('h1').text(t);
+}
+</script>
