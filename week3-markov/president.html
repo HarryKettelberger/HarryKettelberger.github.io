@@ -1,0 +1,14 @@
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<script src="../lib/markov.js"></script>
+<script>
+var markov = new MarkovGenerator(2,25," ")
+var text = "Adams John Adams John Quincy Arthur Chester Buchanan James Bush George Bush George Carter Jimmy Coolidge Calvin Cleveland Grover Clinton William Eisenhower Dwight Fillmore Millard Ford Gerald Garfield James Grant Ulysses Harding Warren Harrison Benjamin Harrison William Henry Hayes Rutherford Hoover Herbert Jackson Andrew Jefferson Thomas Johnson Andrew Johnson Lyndon Kennedy John  Lincoln Abraham Madison James McKinley William Monroe James Nixon Richard Obama Barack Pierce Franklin Polk James Reagan Ronald Roosevelt Franklin Roosevelt Theodore Taft William  Taylor Zachary Truman Harry Tyler John Van Buren Martin Washington George Wilson Woodrow" 
+markov.feed(text)
+function generate(){
+	var t = markov.generate()
+	t = t.split(" ").slice(0,2).join(" ")
+	$('h1').text(t);
+}
+</script>
+<h1>Who are you voting for this election?</h1>
+<button onclick="generate()">Generate</button>
