@@ -2,7 +2,7 @@
 <script src="../lib/markov.js"></script>
 <script>
 var markov = new MarkovGenerator(2,25," ")
-var text = "Adams John Adams John Quincy Arthur Chester Buchanan James Bush George Bush George Carter Jimmy Coolidge Calvin Cleveland Grover Clinton William Eisenhower Dwight Fillmore Millard Ford Gerald Garfield James Grant Ulysses Harding Warren Harrison Benjamin Harrison William Henry Hayes Rutherford Hoover Herbert Jackson Andrew Jefferson Thomas Johnson Andrew Johnson Lyndon Kennedy John  Lincoln Abraham Madison James McKinley William Monroe James Nixon Richard Obama Barack Pierce Franklin Polk James Reagan Ronald Roosevelt Franklin Roosevelt Theodore Taft William  Taylor Zachary Truman Harry Tyler John Van Buren Martin Washington George Wilson Woodrow" 
+var text = "Adams John Adams John Quincy Arthur Chester Buchanan James Bush George Bush George Carter Jimmy Coolidge Calvin Cleveland Grover Clinton William Eisenhower Dwight Fillmore Millard Ford Gerald Garfield James Grant Ulysses Harding Warren Harrison Benjamin Harrison William Henry Hayes Rutherford Hoover Herbert Jackson Andrew Jefferson Thomas Johnson Andrew Johnson Lyndon Kennedy John Lincoln Abraham Madison James McKinley William Monroe James Nixon Richard Obama Barack Pierce Franklin Polk James Reagan Ronald Roosevelt Franklin Roosevelt Theodore Taft William Taylor Zachary Truman Harry Tyler John Van Buren Martin Washington George Wilson Woodrow Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle Blastoise Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey Pidgeotto Pidgeot Rattata Raticate Spearow Fearow Ekans Arbok Pikachu Raichu Sandshrew Sandslash" 
 markov.feed(text)
 function generate(){
 	var t = markov.generate()
